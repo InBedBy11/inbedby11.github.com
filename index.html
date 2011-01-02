@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>InBedBy11</title>
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<meta name="author" content="InBedBy11"/>
+<meta name="keywords" content="InBedBy11 twitter contact"/>
+<meta name="description" content="InBedBy11 twitter contact" />
+<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1;"/>
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" media="all" href="/stylesheets/index.css"/>
+
+<script type="text/javascript" src="http://use.typekit.com/ged5lgj.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body id="index">
+<header>
+<h1>InBedBy11</h1>
+</header>
+<section id="resizeable">
+  <div id="signupForm">
+    <h1>Enter your email address for an invite</h1>
+    <form action="#" method="post" id="emailForm">
+      <div class="fieldContainer">
+        <div class="formRow">
+          <div class="field">
+            <input type="text" name="email" id="email" />
+          </div>
+        </div>
+      </div> 
+      <div class="signupButton">
+        <input type="submit" name="submit" id="submit" value="" />
+      </div>
+    </form>
+  </div>
+
+<!-- 
+<section id="eightcols">
+<h2>
+<a href="http://www.twitter.com/InBedBy11" target="_blank">twitter<img src="http://commondatastorage.googleapis.com/assets.sukhchander.com/images/twitter.png"/></a>
+</h2>
+</section >
+-->
+
+  <div id="greeting" style="display:none;text-align:center;margin:12px 0px 0px 96px;font-size:24px;"></div>
+</section>
+</body>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-89596-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script src="http://commondatastorage.googleapis.com/assets.sukhchander.com/javascripts/index.js"></script>
+<script src="http://commondatastorage.googleapis.com/assets.sukhchander.com/javascripts/images.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#index').css({"background-image" : "url(" + images[0] + ")"});
+  $('#greeting').html("<h3>"+greeting+"</h3>");
+  $('#greeting').fadeIn(5000);
+});
+</script>
+</html>

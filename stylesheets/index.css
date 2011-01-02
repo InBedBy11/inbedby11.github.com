@@ -1,0 +1,423 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, q, small, strong, sub, sup, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article, aside, figure, figure img, figcaption, hgroup,
+footer, header, nav, section {
+  display: block;
+}
+
+a {outline: none;}
+a img {border: 0;}
+
+figure {position: relative;}
+figure img {width: 100%;}
+
+img {
+  padding: 20px;
+}
+a {
+  text-decoration: none;
+  color: rgb(255,255,255);
+}
+a:active {
+  text-decoration: underline;
+}
+a { opacity:0.5; }
+a:hover { opacity:1; }
+a:hover a strong { opacity:1; top:-10px; }
+
+header h1 {
+  font-size: 96px;
+  line-height: 96px;
+  letter-spacing: -4px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+h2 b {
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: -1px;
+}
+
+abbr {
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  line-height: 1em;
+  font-variant: small-caps;
+}
+article p, article ul, article pre {
+  margin-top: 24px;
+}
+article ul {
+  list-style: circle;
+  padding-left: 1.2em;
+}
+article code {
+  overflow: auto;
+  display: block;
+}
+
+/*  Default 8-column layout
+  60 px columns, 24 px gutters, 60 px margins, 768 px total
+  ----------------------------------------------------------------
+  1     2      3      4      5      6      7      8     
+  60px  144px  228px  312px  396px  480px  564px  648px */
+
+body {
+  background: rgb(255,255,255);
+  color: rgb(255,255,255);
+  padding: 84px 59px 0;
+  width: 648px;
+  margin: 0 auto;
+  position: relative;
+
+  /*font-family: "magion-web-1", "magion-web-2", sans-serif;*/
+  font-family: "orgovan-rounded-web-1", "orgovan-rounded-web-2", sans-serif;
+
+  -webkit-box-reflect: below -32px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.75, transparent), to(rgba(255,255,255, 0.75)));
+}
+
+#index {
+  background-position: center top; 
+  background-repeat: no-repeat;
+}
+
+::selection    {background: rgb(255,255,158);}
+::-moz-selection {background: rgb(255,255,158);}
+
+#resizeable {
+  margin-bottom: 48px;
+  clear: both;
+  float: left;
+}
+  
+#resizeable h1 {
+  padding-bottom: 48px;
+}
+
+#resizeable h2 {
+  font-weight: normal;
+  text-align: center;
+  padding: 32px 12px 14px;
+  height: 108px;
+  width: 144px;
+  
+  -webkit-box-shadow: 0 4px 9px rgba(0,0,0,0.25);
+     -moz-box-shadow: 0 4px 9px rgba(0,0,0,0.25);
+          box-shadow: 0 4px 9px rgba(0,0,0,0.25);
+}
+
+#resizeable section {
+  float: left;
+  width: 96px;
+  margin-right: 32px;
+}
+
+#threecols, #fivecols, #eightcols, #thirteencols {
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.67, transparent), to(rgba(255,255,255, 0.33)));
+}
+
+#threecols h2 {
+  height: 30px;
+  width: 30px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+#fivecols h2 {
+  height: 60px;
+  width: 60px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+}
+
+#eightcols h2 {
+  height: 100px;
+  width: 100px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+}
+
+#thirteencols h2 {
+  height: 200px;
+  width: 200px;
+  -moz-border-radius: 120px;
+  border-radius: 120px;
+}
+
+#resizeable #thirteencols {
+  padding-right: 0;
+  border-right: 0;
+  margin-right: 0;
+}
+  
+footer {
+  border-top: 1px solid rgb(255,255,255);
+  padding: 24px 0 72px;
+  position: relative;
+}
+
+
+/*  For both mobile layouts */
+@media only screen and (max-width: 767px) {
+  #resizeable section, #resizeable p {
+    float: none;
+    clear: both;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: auto;
+  }
+  #resizeable figure {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 12px 0 0 24px;
+  }
+  #resizeable p+figure {
+    margin-left: 0;
+  }
+}
+
+
+/*  5-column layout
+  60 px columns, 24 px gutters, 42 px margins, 480 px total
+  ---------------------------------------------------------
+  1     2      3      4      5
+  60px  144px  228px  312px  396px  */
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+  body {
+    padding: 48px 41px 0;
+    width: 396px;
+  }
+  
+  header h1 {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 0;
+  }
+  
+  #resizeable section {
+    padding: 12px 0 132px 168px;
+    position: relative;
+    float: left;
+  }
+  
+  #resizeable h2 {
+    position: absolute;
+    left: 0; top: 0;
+  }
+  
+  #resizeable p {
+    position: absolute;
+    right: 0; top: 96px;
+    width: 228px;
+  }
+  
+  #resizeable figure {
+    margin-top: 0;
+  }
+}
+
+
+/*  3-column layout
+  60 px columns, 24 px gutters, 46 px margins, 320 px total
+  ---------------------------------------------------------
+  1     2      3
+  60px  144px  228px  */
+
+@media only screen and (max-width: 479px) {
+  body {
+    padding: 48px 46px 0;
+    width: 228px;
+  }
+  
+  #about {
+    padding-top: 24px;
+  }
+  
+  header h1 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0;
+    margin-bottom: 12px;
+  }
+    
+  #resizeable h2 {
+    width: auto;
+    height: auto;
+    font: normal 600 16px/1.5 "magion-web-1", "magion-web-2", sans-serif;
+    text-align: left;
+    padding: 48px 0 0;
+    background: none;
+    color: rgb(23,23,23);
+    
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: none;
+       -moz-transform: none;
+            transform: none;
+  }
+    
+  #resizeable #threecols h2 {padding: 0;}
+
+  #resizeable h2 b {
+    font-size: 1em;
+    line-height: inherit;
+    display: inline;
+    font-weight: 600;
+  }
+  
+  #resizeable p {
+    padding: 0;
+    margin-top: 12px;
+  }
+}
+
+
+#signupForm{
+  width: 98%;
+
+  margin: 0 auto;
+  padding: 56px;
+  
+  -webkit-box-shadow: 0 4px 9px rgba(0,0,0,0.25);
+     -moz-box-shadow: 0 4px 9px rgba(0,0,0,0.25);
+          box-shadow: 0 4px 9px rgba(0,0,0,0.25);
+
+}
+
+#signupForm h1{
+  font-size:24px;
+  font-weight:normal;
+  padding:0 0 12px 0px;
+  text-align:center;
+}
+
+.fieldContainer{
+  padding:16px;
+  
+  -webkit-box-shadow: 0 0 20px #292929 inset;
+     -moz-box-shadow: 0 0 20px #292929 inset;
+          box-shadow: 0 0 20px #292929 inset;
+}
+
+#signupForm,.fieldContainer,.errorTip{
+  -webkit-border-radius: 24px;
+     -moz-border-radius: 24px;
+          border-radius: 24px;
+}
+
+.formRow{
+  height:36px;
+  margin-left:96px;
+  position:relative;
+}
+
+.label{
+  float:left;
+  padding:0 20px 0 0;
+  text-align:right;
+  width:70px;
+}
+
+label{
+  font-size:11px;
+  letter-spacing:1px;
+  line-height:35px;
+}
+
+.field{
+  float:left;
+}
+
+.field input{
+  border:1px solid white;
+  background:url("/images/box_bg.png") repeat-x scroll left top #ffffff;
+  outline:none;
+  color: #444444;
+  font-size: 16px;
+  padding: 8px;
+  width: 313px;
+  text-align: center;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.signupButton {
+  text-align:center;
+  padding:32px 0 16px;
+}
+
+#submit{
+  border:2px solid #f4f4f4;
+  cursor:pointer;
+  height:36px;
+  text-transform:uppercase;
+  width:128px;
+  
+  background:url("/images/submit.png") no-repeat center center #d0ecfd;
+  
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+#submit.active{
+  background-image:url("/images/preloader.gif");
+}
+
+#submit:hover{
+  background-color:#dcf2ff;
+  border:1px solid white;
+}
+
+input:hover,input:focus{
+  -webkit-box-shadow: 0 0 8px lightblue;
+     -moz-box-shadow: 0 0 8px lightblue;
+          box-shadow: 0 0 8px lightblue;
+}
+
+.errorTip {
+  background-color: #970F08;
+  color: white;
+  font-size: 12px;
+  height: 24px;
+  letter-spacing: 0.75px;
+  padding: 10px 8px 4px 16px;
+  position: absolute;
+  right: -124px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #555555;
+  width: 196px;
+}
+
+#footer{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  padding:10px;
+  color:#eee;
+  text-align:center;
+  font-weight:normal;
+  font-style:italic;
+}
+
+#greeting {
+  display:none;
+  text-align:center;
+  margin:12px 0px 0px 96px;
+  font-size:24px;
+}
+}
